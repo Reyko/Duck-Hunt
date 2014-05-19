@@ -11,17 +11,32 @@ $(document).ready(function() {
   // Moves the crosshair with the mousepointer
   // TODO: Add a mousemove event to the #game element...
 
-  $(document).on('mousemove', function(e){
-    $('#crosshair').css({
-       left:  e.pageX,
-       top:   e.pageY,
-       display: "block"
-    });
-  });
+  // $(document).on('mousemove', function(e){
+  //   $('#crosshair').css({
+  //      left:  e.pageX,
+  //      top:   e.pageY,
+  //      display: "block"
+  //   });
+  // });
 
 
 
   // Kick-off a New Game
   // TODO: Pass in a string to represent the difficulty level
-  new Game();
+
+
+
+
+  $("#start").click(function() {
+       // alert( "Handler for .click() called." );
+       // alert($('input[name=difficulty]:checked').val());
+
+       difficulty = $('input[name=difficulty]:checked').val();
+        $("#modal").toggle();
+       game = new Game(difficulty);
+  });
+
+  // new Game();
+
+
 });
