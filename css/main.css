@@ -13,10 +13,27 @@ body {
   height: 768px;
   overflow: hidden;
   cursor: none;
+  position:relative;
+}
+
+#running-score{
+
+  position:absolute;
+  background-color:#000;
+  width:220px;
+  height:60px;
+  bottom:20px;
+  right:120px;
+  color:#fff;
+  font-size: 60px;
+  text-align: center;
+  font-family: Arial;
+
 }
 
 #crosshair {
-  position: absolute;
+  display: none;
+  position: relative;
   z-index: 2;
   background: url(../img/crosshair.png);
   width: 60px;

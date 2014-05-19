@@ -14,7 +14,8 @@ $(document).ready(function() {
   $(document).on('mousemove', function(e){
     $('#crosshair').css({
        left:  e.pageX,
-       top:   e.pageY
+       top:   e.pageY,
+       display: "block"
     });
   });
 

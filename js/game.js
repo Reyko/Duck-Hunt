@@ -11,7 +11,7 @@ function Game(difficulty) {
   else {
     this.speed = this.difficulty[difficulty];
   }
-  
+
   // Kick-off the first wave of Ducks
   this.nextRound();
 }
@@ -55,4 +55,5 @@ Game.prototype.gameOver = function() {
 Game.prototype.addScore = function(points) {
   this.score += points;
   console.log("Score: " + this.score);
+  $("#running-score").html(this.score);
 }
