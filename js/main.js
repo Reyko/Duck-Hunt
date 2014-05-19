@@ -28,12 +28,13 @@ $(document).ready(function() {
    difficulty = $('input[name=difficulty]:checked').val();
     $("#modal").toggle();
    game = new Game(difficulty);
-   
+
    $(document).on('mousemove', function(e){
       $('#crosshair').css({
-         left:  e.pageX,
-         top:   e.pageY,
-         display: "block"
+         left:  e.pageX - 30,
+         top:   e.pageY - 30,
+         display: "block",
+
        });
     });
   });
