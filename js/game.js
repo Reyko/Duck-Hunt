@@ -11,7 +11,7 @@ function Game(difficulty) {
   else {
     this.speed = this.difficulty[difficulty];
   }
-
+  
   // Kick-off the first wave of Ducks
   this.nextRound();
 }

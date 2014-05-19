@@ -7,6 +7,7 @@ $(document).ready(function() {
     new Game();
   });
 
+  
   // Moves the crosshair with the mousepointer
   // TODO: Add a mousemove event to the #game element...
 
