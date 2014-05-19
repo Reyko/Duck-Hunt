@@ -7,9 +7,18 @@ $(document).ready(function() {
     new Game();
   });
 
-  
+
   // Moves the crosshair with the mousepointer
   // TODO: Add a mousemove event to the #game element...
+
+  $(document).on('mousemove', function(e){
+    $('#crosshair').css({
+       left:  e.pageX,
+       top:   e.pageY
+    });
+  });
+
+
 
   // Kick-off a New Game
   // TODO: Pass in a string to represent the difficulty level

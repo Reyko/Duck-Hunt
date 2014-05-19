@@ -16,12 +16,12 @@ body {
 }
 
 #crosshair {
-  display: none;
-  position: relative;
+  position: absolute;
   z-index: 2;
   background: url(../img/crosshair.png);
   width: 60px;
   height: 60px;
+
 }
 
 .sprite {
