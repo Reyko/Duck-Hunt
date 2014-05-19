@@ -47,7 +47,7 @@ Duck.prototype.draw = function() {
   // ... and Fly!
   $(this.el).animate({
       left: '100%'
-  },8000);
+  }, this.game.speed);
   
   // Start Flapping...
 
@@ -72,7 +72,7 @@ Duck.prototype.die = function() {
   // Fall to the bottom of the screen
   $(this.el).animate({
       top: '150%'
-  },this.game.difficulty);
+  },5000);
 
 }
 
