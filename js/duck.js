@@ -42,12 +42,14 @@ Duck.prototype.draw = function() {
   console.log();
   $("#game").append(this.el);
   $(this.el).css('left','-5%');
+
   
 
   // ... and Fly!
   $(this.el).animate({
-      left: '100%'
-  }, this.game.speed);
+      left: '100%',
+      top: randomHeight() / 2, 
+  }, this.game.speed,"linear");
   
   // Start Flapping...
 
@@ -58,21 +60,22 @@ Duck.prototype.draw = function() {
 // TODO: I've been shot!
 Duck.prototype.die = function() {
   // Add a .dead CSS class
-    $(this.el).addClass("dead");
+  
+   $(this.el).addClass("dead");
+
+   soundEffect.play();
 
   // Stop flapping - clear the flapTimer
     clearTimeout(this.flapTimer);
-
   // Stop flying animations
     $(this.el).stop();
-
   // Notify the Game object and add 100 to the score
     this.game.addScore(100);
-
   // Fall to the bottom of the screen
   $(this.el).animate({
       top: '150%'
   },5000);
+  
 
 }
 
