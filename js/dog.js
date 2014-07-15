@@ -40,7 +40,6 @@ Dog.prototype.walk = function() {
     // Do this again in 500 mililsceonds
     setTimeout(animateDog, 300);
   }
-  
 
   // Do this again in 500 mililsceonds
   setTimeout(animateDog, 300);
